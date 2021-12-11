@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/image")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(origins = {"${cors_origin}"})
 public class ImageController {
 
     @Autowired

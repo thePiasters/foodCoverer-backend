@@ -5,17 +5,12 @@ import com.foodCoverer.model.User;
 import com.foodCoverer.repository.UserRepository;
 import com.foodCoverer.service.UserService;
 import com.foodCoverer.session.SessionManager;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.gson.GsonFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.List;
@@ -23,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins ="http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = {"${cors_origin}"}, allowCredentials = "true")
 public class UserController {
 
     @Autowired

@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin(origins = {"${cors_origin}"}, allowCredentials = "true")
 @RequestMapping("/tags")
 public class TagsController {
 

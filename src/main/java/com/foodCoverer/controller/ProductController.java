@@ -5,7 +5,6 @@ import com.foodCoverer.repository.ProductRepository;
 import com.foodCoverer.service.ProductService;
 import com.foodCoverer.session.SessionManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
@@ -19,7 +18,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = {"${cors_origin}"}, allowCredentials = "true")
 public class ProductController {
 
 
